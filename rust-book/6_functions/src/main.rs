@@ -1,5 +1,5 @@
 fn main() {
-    println!("Hello, functions!");
+    println!("Hello, 6_functions!");
 
     another_function(1, 'Y');
 
