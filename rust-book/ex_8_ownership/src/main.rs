@@ -1,7 +1,7 @@
 use std::ops::Add;
 
 fn main() {
-    println!("Hello, 8_ownership!");
+    println!("Hello, ex_8_ownership!");
 
     simple_str();
 
