@@ -43,7 +43,9 @@ fn main() {
     println!("home1 is: {:#?}", home1);
     println!("loopback1 is: {:#?}", loopback1);
 
-    test_enum_like_struct()
+    test_enum_like_struct();
+
+    test_some_option()
 }
 
 fn route(ip: IpAddrType) {
@@ -71,6 +73,22 @@ fn test_enum_like_struct() {
 
 fn test_handle_message(msg: Message) {
     println!("received msg: {:#?}", msg);
+}
+
+fn test_some_option() {
+    let some_number_1 = Some(5);
+    let some_number_2 = Some(7);
+
+    // doesnt works like in TS :)
+    // if some_number_1.is_some() && some_number_2.is_some() {
+    //     let sum = some_number_1 + some_number_2;
+    // }
+    if let (Some(n1), Some(n2)) = (some_number_1, some_number_2) {
+        let sum = n1 + n2;
+        println!("Options sum is {}", sum);
+    } else {
+        println!("One of the options is None");
+    }
 }
 
 
